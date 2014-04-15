@@ -18,7 +18,7 @@ Basic Example
 
 ```html
 <form class="form-horizontal" role="form" ng-controller="Demo1Ctrl">
-  <input option-tree="tree_data" option-tree-class="form-control">
+  <input option-tree="tree_data" option-tree-class="form-contol">
 </form>
 ```
 
@@ -35,3 +35,8 @@ Loading Remote Data (JSON)
 ```
 
 **option-tree-src:** remote JSON source.
+
+License
+------
+MIT
+
