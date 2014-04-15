@@ -4,7 +4,7 @@ Angular Option Tree
 
 [Demo](http://leechsien.github.io/angular-option-tree/)
 
-A directive to use jquery-option-tree with AngularJS. 
+A directive to use [jquery-option-tree](https://code.google.com/p/jquery-option-tree/) with AngularJS. 
 
 Usage
 ------
