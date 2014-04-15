@@ -24,7 +24,7 @@ Basic Example
 
 **option-tree:** JSON object in angular controller scope.
 
-**option-tree-class:** customize style for generated <select> element.
+**option-tree-class:** customize style for generated `<select>` element.
 
 Loading Remote Data (JSON)
 ------
