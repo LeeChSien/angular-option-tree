@@ -1,0 +1,16 @@
+{
+  "Remote Option 1": {
+    "Suboption": 200,
+    "Suboption 3": {
+      "Subsub 3": 203,
+      "Subsub 4": 204,
+      "Subsub 5": 205
+    }
+  },
+  "Remote Option 2": {
+    "Suboption 2": {
+      "Subsub 1": 201,
+      "Subsub 2": 202
+    }
+  }
+}

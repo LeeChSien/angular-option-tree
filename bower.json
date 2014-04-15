@@ -1,0 +1,31 @@
+{
+  "name": "angular-option-tree",
+  "version": "0.8.0",
+  "authors": [
+    "Jason Lee <chsien@gmail.com>"
+  ],
+  "description": "An AngularJS directive to work with Krzysztof Kotowicz's Jquery-option-tree",
+  "main": "./angular-option-tree.js",
+  "keywords": [
+    "tree",
+    "select"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "src",
+    "*.min.js",
+    "*.conf.js",
+    "*.html",
+    "Gruntfile.js",
+    "package.json"
+  ],
+  "dependencies": {
+    "angular": "~1.2.0",
+    "jquery": "~2.0.3",
+    "jquery-option-tree": "~1.3.0"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Angular Option Tree</title>
+        <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            body {
+                margin-top: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container" ng-app="optionTreeApp">
+          <div class="jumbotron">
+            <h1>angular-option-tree</h1>
+
+            <p>A directive to use jquery-option-tree with AngularJS.</p>
+
+            <iframe
+            src="http://ghbtns.com/github-btn.html?user=leechsien&repo=angular-option-tree&type=watch&size=large&count=true"
+            allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
+
+            <iframe
+            src="http://ghbtns.com/github-btn.html?user=leechsien&repo=angular-option-tree&type=fork&size=large&count=true"
+            allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
+
+            <iframe
+            src="http://ghbtns.com/github-btn.html?user=leechsien&repo=angular-option-tree&type=follow&size=large&count=true"
+            allowtransparency="true" frameborder="0" scrolling="0" width="190" height="30"></iframe>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Getting Started</h3>
+                </div>
+                <div class="panel-body">
+                  <ol>
+                      <li>Install with bower: <code>bower install --save angular-option-tree</code></li>
+                      <li>Include <code>angular-option-tree.js</code>.</li>
+                      <li>Add <code>option-tree</code> to you app modules.</li>
+                      <li>Use the <code>option-tree</code> directive.</li>
+                  </ol>
+
+                  If you hate proper package management, you can also
+                  directly download
+                  <a href="./angular-option-tree.js">angular-option-tree.js</a> or
+                  <a href="./angular-option-tree.min.js">angular-option-tree.min.js</a>.
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Usage</h3>
+                </div>
+                <div class="panel-body">
+                  <form class="form-horizontal" role="form" ng-controller="Demo1Ctrl">
+                    <legend>Basic</legend>
+                    <div class="form-group">
+                      <label for="inputEmail3" class="col-sm-2 control-label">Result</label>
+                      <div class="col-sm-4">
+                        <input option-tree="tree_data" option-tree-class="form-control control-offset" class="form-control">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">HTML</label>
+                      <div class="col-sm-9">
+<pre>&lt;form class="form-horizontal" role="form" ng-controller="Demo1Ctrl"&gt;
+  &lt;input <strong>option-tree="tree_data"</strong> <strong>option-tree-class="form-control"</strong>&gt;
+&lt;/form&gt;</pre>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Javascript</label>
+                      <div class="col-sm-9">
+<pre class="prettyprint">
+angular.module('optionTreeApp', ['option-tree']).
+    controller('Demo1Ctrl', function ($scope) {
+      $scope.tree_data = {
+        'Option 1': {
+          'Suboption': 200
+        },
+        'Option 2': {
+          'Suboption 2': {
+            'Subsub 1': 201,
+            'Subsub 2': 202
+          },
+          'Suboption 3': {
+            'Subsub 3': 203,
+            'Subsub 4': 204,
+            'Subsub 5': 205
+          }
+        }
+      };
+    });</pre>
+                      </div>
+                    </div>
+                  </form>
+
+                  <form class="form-horizontal" role="form" ng-controller="Demo2Ctrl">
+                    <legend>Preselected Options</legend>
+                    <div class="form-group">
+                      <label for="inputEmail3" class="col-sm-2 control-label">Result</label>
+                      <div class="col-sm-4">
+                        <input option-tree="tree_data" option-tree-class="form-control control-offset" class="form-control" value="203">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">HTML</label>
+                      <div class="col-sm-9">
+<pre>&lt;form class="form-horizontal" role="form" ng-controller="Demo2Ctrl"&gt;
+  &lt;input <strong>option-tree="tree_data"</strong> <strong>option-tree-class="form-control"</strong> <strong class="red">value="203"</strong>&gt;
+&lt;/form&gt;</pre>
+                      </div>
+                    </div>
+                  </form>
+
+                  <form class="form-horizontal" role="form" ng-controller="Demo3Ctrl">
+                    <legend>Change Option Data Dynamically</legend>
+                    <div class="form-group">
+                      <label for="inputEmail3" class="col-sm-2 control-label">Result</label>
+                      <div class="col-sm-4">
+                        <input option-tree="tree_data" option-tree-class="form-control control-offset" class="form-control" name="test1">
+                        <hr>
+                        <button type="button" class="btn btn-danger" ng-click="change_tree_data()">Change</button>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">HTML</label>
+                      <div class="col-sm-9">
+<pre>&lt;form class="form-horizontal" role="form" ng-controller="Demo3Ctrl"&gt;
+  &lt;input <strong>option-tree="tree_data"</strong> <strong>option-tree-class="form-control"</strong>&gt;
+  &lt;button&gt; type="button" <strong class="red">ng-click="change_tree_data()"</strong>&gt;Change&lt;/button&gt;
+&lt;/form&gt;</pre>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Javascript</label>
+                      <div class="col-sm-9">
+<pre class="prettyprint">
+angular.module('optionTreeApp', ['option-tree']).
+    controller('Demo3Ctrl', function ($scope) {
+      $scope.tree_data = {
+        'Option 1': {
+          'Suboption': 200
+        },
+        'Option 2': {
+          'Suboption 2': {
+            'Subsub 1': 201,
+            'Subsub 2': 202
+          },
+          'Suboption 3': {
+            'Subsub 3': 203,
+            'Subsub 4': 204,
+            'Subsub 5': 205
+          }
+        }
+      };
+
+      $scope.change_tree_data = function() {
+        $scope.tree_data = {
+          'Another Option 1': {
+            'Suboption': 200,
+            'Suboption 3': {
+              'Subsub 3': 203,
+              'Subsub 4': 204,
+              'Subsub 5': 205
+            }
+          },
+          'Another Option 2': {
+            'Suboption 2': {
+              'Subsub 1': 201,
+              'Subsub 2': 202
+            }
+          }
+        };
+      };
+    });</pre>
+                      </div>
+                    </div>
+                  </form>
+
+                  <form class="form-horizontal" role="form" ng-controller="Demo4Ctrl">
+                    <legend>Loading Remote Data</legend>
+                    <div class="form-group">
+                      <label for="inputEmail3" class="col-sm-2 control-label">Result</label>
+                      <div class="col-sm-4">
+                        <input option-tree option-tree-src="example.json" option-tree-class="form-control control-offset" class="form-control">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">HTML</label>
+                      <div class="col-sm-9">
+<pre>&lt;form class="form-horizontal" role="form" ng-controller="Demo4Ctrl"&gt;
+  &lt;input <strong class="red">option-tree-src="example.json"</strong> <strong>option-tree-class="form-control"</strong>&gt;
+&lt;/form&gt;</pre>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+        </div>
+
+        <a href="https://github.com/LeeChSien/angular-option-tree"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
+
+        <script src="bower_components/jquery/jquery.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/jquery-option-tree/jquery-option-tree.js"></script>
+        <script src="angular-option-tree.js"></script>
+
+        <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+        <!-- Demo css -->
+        <style>
+          .control-offset {
+            margin-bottom: 5px;
+          }
+          .red {
+            color: red;
+          }
+        </style>
+        <!-- Demo script -->
+        <script>
+          var default_tree_data = {
+            'Option 1': {
+              'Suboption': 200
+            },
+            'Option 2': {
+              'Suboption 2': {
+                'Subsub 1': 201,
+                'Subsub 2': 202
+              },
+              'Suboption 3': {
+                'Subsub 3': 203,
+                'Subsub 4': 204,
+                'Subsub 5': 205
+              }
+            }
+          };
+          angular.module('optionTreeApp', ['option-tree']).
+            controller('Demo1Ctrl', function ($scope) {
+              $scope.tree_data = default_tree_data;
+            }).
+            controller('Demo2Ctrl', function ($scope) {
+              $scope.tree_data = default_tree_data;
+            }).
+            controller('Demo3Ctrl', function ($scope) {
+              $scope.tree_data = default_tree_data;
+              $scope.change_tree_data = function() {
+                $scope.tree_data = {
+                  'Another Option 1': {
+                    'Suboption': 200,
+                    'Suboption 3': {
+                      'Subsub 3': 203,
+                      'Subsub 4': 204,
+                      'Subsub 5': 205
+                    }
+                  },
+                  'Another Option 2': {
+                    'Suboption 2': {
+                      'Subsub 1': 201,
+                      'Subsub 2': 202
+                    }
+                  }
+                };
+              };
+            }).
+            controller('Demo4Ctrl', function ($scope) {
+              // nothing
+            });
+        </script>
+    </body>
+</html>
