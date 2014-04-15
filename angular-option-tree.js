@@ -18,7 +18,7 @@
     var sub_path = [];
     for (var key in json) {
       if(json[key] === parseInt(json[key], 10)) {
-        if(json[key] === value) {
+        if(json[key] == value) {
           sub_path.push(key);
           return sub_path;
         } else {
