@@ -22,8 +22,9 @@ Basic Example
 </form>
 ```
 
-**option-tree** JSON object in angular controller scope.
-**option-tree-class** customize style for generated <select> element.
+**option-tree:** JSON object in angular controller scope.
+
+**option-tree-class:** customize style for generated <select> element.
 
 Loading Remote Data (JSON)
 ------
@@ -33,4 +34,4 @@ Loading Remote Data (JSON)
 </form>
 ```
 
-**option-tree-src** remote JSON source.
+**option-tree-src:** remote JSON source.
