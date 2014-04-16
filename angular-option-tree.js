@@ -1,5 +1,6 @@
 /*!
  * angular-option-tree v0.8.0
+ * Author: Jason Lee
  * License: MIT
  */
 (function () {
