@@ -2,6 +2,11 @@ Angular Option Tree
 ===================
 [![Code Climate](https://codeclimate.com/github/passy/angular-masonry.png)](https://codeclimate.com/github/passy/angular-masonry)
 
+> Distributed via
+
+[![Bower version](https://badge.fury.io/bo/option-tree.svg)                                     ](https://badge.fury.io/bo/angular-option-tree)
+
+
 [Demo](http://leechsien.github.io/angular-option-tree/)
 
 A directive to use [jquery-option-tree](https://code.google.com/p/jquery-option-tree/) with AngularJS. 
