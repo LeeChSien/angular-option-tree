@@ -32,7 +32,7 @@
     }
     return [];
   }
-  angular.module('option-tree').directive('optionTree', [
+  angular.module('option-tree', []).directive('optionTree', [
     '$http',
     function ($http) {
       return {

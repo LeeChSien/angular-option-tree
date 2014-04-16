@@ -35,8 +35,8 @@
     return [];
   }
 
-  angular.module('option-tree')
-    .directive('optionTree', ['$http', function($http) {
+  angular.module('option-tree', [])
+    .directive('optionTree', function($http) {
       return {
         restrict: 'AC',
         link: function (scope, element, attrs) {
@@ -91,5 +91,5 @@
           }
         }
       };
-    }]);
+    });
 }());
