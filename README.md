@@ -1,6 +1,7 @@
 Angular Option Tree
 ===================
 [![Code Climate](https://codeclimate.com/github/passy/angular-masonry.png)](https://codeclimate.com/github/passy/angular-masonry)
+[![Build Status](https://travis-ci.org/LeeChSien/angular-option-tree.svg?branch=master)](https://travis-ci.org/LeeChSien/angular-option-tree)
 
 > Distributed via
 
