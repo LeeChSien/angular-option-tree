@@ -35,7 +35,7 @@
     return [];
   }
 
-  angular.module('option-tree', [])
+  angular.module('option-tree')
     .directive('optionTree', ['$http', function($http) {
       return {
         restrict: 'AC',
