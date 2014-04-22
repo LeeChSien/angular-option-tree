@@ -1,0 +1,25 @@
+{
+  "name": "jquery-option-tree",
+  "version": "1.3.0",
+  "authors": [
+    "kkotowicz <kkotowicz@gmail.com>"
+  ],
+  "description": "This jquery plugin converts passed JSON option tree into dynamically created <select> elements allowing you to choose one nested option from the tree.",
+  "main": "./jquery-option-tree",
+  "keywords": [
+    "jquery-option-tree",
+    "tree-select"
+  ],
+  "license": "MIT",
+  "homepage": "https://code.google.com/p/jquery-option-tree/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.0.3"
+  }
+}
