@@ -20,8 +20,6 @@
         if (json[key] == value) {
           sub_path.push(key);
           return sub_path;
-        } else {
-          return [];
         }
       } else {
         sub_path = get_preselect_path(json[key], value);
@@ -59,8 +57,9 @@
           }
           function bind_option_tree(option_tree) {
             if (isInit) {
+              var tempVar = $(element).val();
               $(element_query_pattern).optionTree('destroy');
-              $(element).val('');
+              $(element).val(tempVar);
             } else {
               isInit = true;
             }
