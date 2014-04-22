@@ -67,8 +67,9 @@
 
           function bind_option_tree(option_tree) {
             if(isInit) {
+              var tempVar = $(element).val();
               $(element_query_pattern).optionTree('destroy');
-              $(element).val('');
+              $(element).val() = tempVar;
             } else {
               isInit = true;
             }
