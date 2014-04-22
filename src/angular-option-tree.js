@@ -69,7 +69,7 @@
             if(isInit) {
               var tempVar = $(element).val();
               $(element_query_pattern).optionTree('destroy');
-              $(element).val() = tempVar;
+              $(element).val(tempVar);
             } else {
               isInit = true;
             }
