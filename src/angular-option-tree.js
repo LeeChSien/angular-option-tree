@@ -22,8 +22,6 @@
         if(json[key] == value) {
           sub_path.push(key);
           return sub_path;
-        } else {
-          return [];
         }
       } else {
         sub_path = get_preselect_path(json[key], value);
