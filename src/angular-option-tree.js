@@ -42,7 +42,8 @@
           var element_query_pattern = '',
               isInit = false,
               settings = {
-                select_class: $(element).attr('option-tree-class')
+                select_class: $(element).attr('option-tree-class'),
+                choose: $(element).attr('option-tree-prompt')
               };
 
           // Avoid input name is empty

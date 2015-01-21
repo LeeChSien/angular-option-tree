@@ -37,7 +37,10 @@
       return {
         restrict: 'AC',
         link: function (scope, element, attrs) {
-          var element_query_pattern = '', isInit = false, settings = { select_class: $(element).attr('option-tree-class') };
+          var element_query_pattern = '', isInit = false, settings = {
+              select_class: $(element).attr('option-tree-class'),
+              choose: $(element).attr('option-tree-prompt')
+            };
           // Avoid input name is empty
           if (!$(element).attr('name')) {
             $(element).attr('name', get_hash_string());
